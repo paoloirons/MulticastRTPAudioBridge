@@ -182,7 +182,6 @@ WorkingDirectory=${APP_DIR}/web
 ExecStart=${APP_DIR}/.venv/bin/gunicorn --workers 1 --bind 0.0.0.0:${WEB_PORT} --access-logfile - app:app
 Restart=on-failure
 RestartSec=2
-NoNewPrivileges=true
 PrivateTmp=true
 ProtectSystem=strict
 ReadWritePaths=${CFG_DIR}
